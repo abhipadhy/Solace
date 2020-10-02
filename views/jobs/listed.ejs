@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/blog.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+           <a href="/"><h2>Solace</h2></a> 
+            <ul>
+                <% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+		</div>
+		<br>
+		
+<div class="ocontainer">
+	<h1>Jobs Available</h1>
+	<p>
+        Find a job .  Get a Job . Do your Job. Get paid. And never forget to Solace!<br>
+        Click on the Job to Apply.
+		</p>
+	<div class="container">
+		
+        <% jobs.forEach(function(job){
+            %>
+		<a href="/jobs/<%= job._id %>/apply" class="card">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRxmB0zbKBSRVMN_-Gn6aBSvxt8_vr0JF1-QQ&usqp=CAU" width="100%">
+					<h4>
+						<%=job.jname%> ||   <%=job.location%>
+                    </h4>
+                    <h4>
+                        <%=job.salary%> 
+                    </h4>
+				</a>
+		<%
+		});%>
+			</div>
+			
+			
+		</div>  
+      
+</body>
+</html>

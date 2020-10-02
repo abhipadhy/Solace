@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/job.css">
+    </head>
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+            	<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <div class="inner">
+
+                </div>
+            </div>
+            <div class="right">
+            <h1>Apply for the Job</h1>
+            <form action="/jobs/<%= job._id %>/applied" method="POST">
+                
+                    <input name="applicant[name]" placeholder="name" type="text">	
+                
+                    <input name="applicant[age]" placeholder="age" type="text">
+               
+                    <input name="applicant[city]" placeholder="city" type="text">
+                
+               
+                    <input name="applicant[skillset]" placeholder="skillset" type="text">
+        
+        
+                    <input name="applicant[contact]" placeholder="contact no" type="text"><br>
+                    <button>Submit</button>
+                </form>
+    
+    </body>
+</html>
+
+

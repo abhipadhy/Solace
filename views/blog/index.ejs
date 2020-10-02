@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/blog.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+           <a href="/"><h2>Solace</h2></a> 
+            <ul>
+				<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+
+			</ul>
+			
+		</div>
+		
+		<br>
+
+		
+<div class="ocontainer">
+	<h1>Blogging Community</h1>
+	<p>
+		Hello! Welcome to Solace blog community! Here we bring to you a virtual safe space where you can share your stories and read others' stories as well!
+		We firmly believe that sharing your feelings can help lower your stress levels!
+		So share away!
+
+		</p>
+	<div class="container">
+		
+		<% posts.forEach(function(post){
+			%>
+		<a href="/blog/<%= post._id %>" class="card">
+				<img src="<%=post.image%>" width="100%">
+					<h4>
+						<%=post.name%>
+					</h4>
+				</a>
+		<%
+		});%>
+			</div>
+			
+			<button class="button" onclick="window.location.href='/blog/new'">Add a new blog</button>
+		</div>  
+      
+</body>
+</html>

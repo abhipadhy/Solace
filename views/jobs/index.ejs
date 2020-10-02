@@ -1,0 +1,69 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/jobhtml.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+           <a style="text-decoration: none;" href="/"><h2>Solace</h2></a> 
+            <ul>
+				<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            
+            
+            <div class="welcome-content">
+                <h1>JOBS </h1>
+                <p>
+                   Welcome to Solace Job Center , This is a one stop solution for find work during the current pandemic situation . Also you can find the avaliable workers for you day to day tasks.
+                </p>
+            </div>
+            
+            
+            <div class="cards-div">
+               <a href="/jobs/list">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="/assets/jobindex.png">
+                    </div>
+                    <div class="cardtitle">
+                    <center>
+                        <h3>Apply for a Job</h3>
+                    </center>    
+                    </div>
+                    
+                </div>
+                </a>
+                
+                <!---=-=-=-=-=-=-=-=-=-=-=-=-=-->
+                <a href="/jobs/new">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="/assets/jobindex1.png">
+                    </div>
+                    <div class="cardtitle">
+                    <center>
+                        <h3>List a new job</h3>
+                    </center>    
+                    </div>
+                   
+                </div>
+                </a>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+

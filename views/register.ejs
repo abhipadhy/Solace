@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/signup.css">
+    </head>
+
+    <body>
+        <div class="left">
+         <a href='/'><p>Solace</p></a>   
+            <div class="leftimg"></div>
+        </div>
+
+        <div class="right">
+            <h2>Sign Up</h2>
+            <p class="rightp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, veniam. Quod, sapiente. Laborum qui molestiae dicta assumenda ratione cum? Distinctio cupiditate dignissimos iste harum eaque pariatur nemo sit velit possimus!</p>
+            <form method='post' action="/register">
+                <input type="text" name="username" class="name" placeholder="Enter Name"><br><br>
+                <input type="text" name="email" class="email" placeholder="Enter Email-Id"><br><br>
+                <input type="password" name="password" class="pass" placeholder="Create a Password"><br><br>
+                <input type="password" class="cpass" placeholder="Confirm Password"><br><br>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <script>
+            document.querySelector('button').addEventListener('click',() =>{
+                var pass= document.querySelector('.pass').value;
+                var cpass= document.querySelector('.cpass').value;
+                if(pass !== cpass){
+                     alert('Passwords do not match');
+                }
+            })
+            
+        </script>
+    </body>
+</html>
+

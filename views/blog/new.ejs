@@ -1,0 +1,33 @@
+<%- include("../partials/header.ejs") %>
+<div class="container">
+	
+	
+
+<h1 style="text-align:center;">
+	Add new Post
+</h1>
+	<div class="row" >
+	
+<form action="/blog" method="POST">
+	<div style="width:50%; margin:25px 40%;">
+	<div class="form-group block">
+		<input name="name" placeholder="name" type="text">	
+	</div>
+	<div class="form-group block">
+		<input name="image" placeholder="url" type="text">
+	</div>
+		<div class="form-group block">
+		<input name="description" placeholder="description" type="text">
+	</div>
+	<div class="form-group ">
+		<button class="btn btn-large btn-primary ">
+		      Submit
+	    </button>	
+	</div>
+	</div>
+
+</form>
+<a href="/blog">Go back</a>
+	</div>
+	</div>
+<%- include("../partials/footer.ejs") %>

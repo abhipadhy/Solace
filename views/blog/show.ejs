@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/chome.css">
+    </head>
+
+    <body>
+        
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link 1</a></li>
+			</ul>
+			
+        </div>
+
+        <div class="container">
+            <h1><%= post.name %>  </h1><br><br>
+            <img src="<%= post.image %>">
+            <p> <%= post.description %></p>
+
+    
+			<a class="btn1" href="/blog/<%= post._id %>/comments/new">Add new comment</a>
+    
+    
+        
+
+            <table>
+				<% post.comments.forEach(function(comment){ %>
+                <tr>
+                    <td class="left"><strong><%= comment.author %> </strong></td>
+                    <td class="right"> <%= comment.text %></td>
+				</tr>
+				<%		   }) %>
+				
+            </table>
+        </div>
+
+    </body>
+</html>

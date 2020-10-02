@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/comment.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link 1</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <div class="inner">
+
+                </div>
+            </div>
+            <div class="right">
+            <h1>Add comment</h1>
+
+            <form action="/blog/<%= post._id %>/comments" method="POST">
+                <input name="comment[author]" placeholder="author" type="text"><br><br>
+                <textarea name="comment[text]" cols="30" rows="10" placeholder="Add your comment here" maxlength="200"></textarea><br><br>
+                <button>Submit</button>
+            </form>
+            </div>
+        </div>
+    </body>
+        
+    
+</html>
+
+
+	

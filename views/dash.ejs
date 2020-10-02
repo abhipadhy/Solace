@@ -1,0 +1,89 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/dash.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+                <% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="userwel">
+                <h1>Dashboard</h1>
+            </div> 
+            <div class="cards-div">
+               <a href="#">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="/assets/1.png">
+                    </div>
+                    <div class="cardtitle">
+                    <center>
+                        <h3>Fitness &amp; Workout</h3>
+                    </center>    
+                    </div>
+                   
+                </div>
+                </a>
+                
+                <!---=-=-=-=-=-=-=-=-=-=-=-=-=-->
+                <a href="#">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="/assets/2.png">
+                    </div>
+                    <div class="cardtitle">
+                    <center>
+                        <h3>Movies &amp; Entertainment</h3>
+                    </center>    
+                    </div>
+                    
+                </div>
+                </a>
+                
+                <!---=-=-=-=-=-=-=-=-=-=-=-=-=-=--->
+                <a href="/blog">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="/assets/3.png">
+                    </div>
+                    <div class="cardtitle">
+                    <center>
+                        <h3>Blog</h3>
+                    </center>    
+                    </div>
+                    
+                </div>
+                </a>
+                <!---=-=-=-=-=-=-=-=-=-=-=-=-=--=-->
+                <a href="jobs">
+                <div class="card">
+                    <div class="cardimg">
+                        <img src="/assets/4.png">
+                    </div>
+                    <div class="cardtitle">
+                    <center>
+                        <h3>Jobs</h3>
+                    </center>    
+                    </div>
+                    
+                </div>
+                </a>
+                
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/jobapply.css">
+    </head>
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+                <% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <div class="inner">
+
+                </div>
+            </div>
+            <div class="right">
+            <h1>List a new job</h1>
+            <form action="/jobs" method="POST">
+               
+                    <input name="jname" placeholder="Job" type="text">	
+                
+               
+                    <input name="company" placeholder="Company" type="text">
+               
+                    <input name="salary" placeholder="Salary" type="text">
+               
+               
+                    <input name="location" placeholder="location" type="text">
+               
+                
+               
+                    <button>
+                          Submit
+                    </button>	
+             
+            
+            </form>
+    
+    </body>
+</html>
+
+
