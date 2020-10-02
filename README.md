@@ -1,1 +1,2 @@
-# Solace HElloWorld 4.0 Team 3
+# 'Solace' 
+HelloWorld 4.0 Team 3
