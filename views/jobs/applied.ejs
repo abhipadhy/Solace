@@ -1,13 +1,30 @@
-<%- include("../partials/header.ejs") %>
-<div class="jumbotron">
-    <h1>
-        Thanks for applying!
-        Your application has been submited!
-    </h1>
-    
 
-</div>
-<a href="/jobs">Go back</a>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/applied.css">
+    </head>
 
+    <body>
+        <div class="navbar">
+            <a style="text-decoration: none;" href="/"><h2>Solace</h2></a> 
+            <ul>
+                <% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dashboad</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
 
-<%- include("../partials/footer.ejs") %>
+        <div class="container">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_jhgfgv8n.json"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            <h1>THANKS FOR APPLYING! <br> Your Response has been submitted </h1>
+        </div>
+
+    </body>
+</html>
