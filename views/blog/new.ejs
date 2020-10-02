@@ -1,33 +1,49 @@
-<%- include("../partials/header.ejs") %>
-<div class="container">
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/comment.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+				<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dashboad</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <div class="inner">
+
+                </div>
+            </div>
+            <div class="right">
+            <h1>Add comment</h1>
+
+            <form action="/blog" method="POST">
+				<input name="name" placeholder="name" type="text">
+				<input name="image" placeholder="enter image url" type="text">
+                <textarea  name="description" placeholder="description" type="text" maxlength="200"></textarea><br><br>
+                <button>Submit</button>
+            </form>
+            </div>
+        </div>
+    </body>
+        
+    
+</html>
+
+
+	
+
 	
 	
 
-<h1 style="text-align:center;">
-	Add new Post
-</h1>
-	<div class="row" >
-	
-<form action="/blog" method="POST">
-	<div style="width:50%; margin:25px 40%;">
-	<div class="form-group block">
-		<input name="name" placeholder="name" type="text">	
-	</div>
-	<div class="form-group block">
-		<input name="image" placeholder="url" type="text">
-	</div>
-		<div class="form-group block">
-		<input name="description" placeholder="description" type="text">
-	</div>
-	<div class="form-group ">
-		<button class="btn btn-large btn-primary ">
-		      Submit
-	    </button>	
-	</div>
-	</div>
-
-</form>
-<a href="/blog">Go back</a>
-	</div>
-	</div>
-<%- include("../partials/footer.ejs") %>

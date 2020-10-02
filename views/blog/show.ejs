@@ -9,25 +9,41 @@
         <div class="navbar">
             <h2>Solace</h2>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Link</a></li>
-                <li><a href="">Link 1</a></li>
+				<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dashboad</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
 			</ul>
 			
-        </div>
-
+		</div>
+	
         <div class="container">
-            <h1><%= post.name %>  </h1><br><br>
-            <img src="<%= post.image %>">
-            <p> <%= post.description %></p>
+			<h1><%= post.name %>  </h1><br><br>
+			
+			
+	<table >
+		<tr>
+			<td ><img src="<%= post.image %>"></td>
+			<td>	<p> <%= post.description %></p></td>
+		</tr>
+	</table>
+	<br><br>
+          
 
     
 			<a class="btn1" href="/blog/<%= post._id %>/comments/new">Add new comment</a>
+
+<br><br>
     
     
         
 
-            <table>
+            <table class="comments">
 				<% post.comments.forEach(function(comment){ %>
                 <tr>
                     <td class="left"><strong><%= comment.author %> </strong></td>

@@ -13,6 +13,7 @@
 					<li><a href="/register">Sign Up</a></li>
 				<%	} else { %>
 					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dashboad</a></li>
 			<%	} %>	
 			<li><a href="/blog">Blogs</a></li>
 			<li><a href="/jobs">Jobs</a></li>
@@ -22,7 +23,11 @@
         <div class="container">
             <div class="userwel">
                 <h1>Dashboard</h1>
-            </div> 
+            </div>
+            <br>
+            <% if(currentUser){ %> 
+            <h2 style="position: absolute;top:15%;left: 40%;">Hello <%= currentUser.username %> !</h2>
+            <%	} %>
             <div class="cards-div">
                <a href="#">
                 <div class="card">
@@ -39,14 +44,14 @@
                 </a>
                 
                 <!---=-=-=-=-=-=-=-=-=-=-=-=-=-->
-                <a href="#">
+                <a href="/tvshows">
                 <div class="card">
                     <div class="cardimg">
                         <img src="/assets/2.png">
                     </div>
                     <div class="cardtitle">
                     <center>
-                        <h3>Movies &amp; Entertainment</h3>
+                        <h3>Suggest me a Show</h3>
                     </center>    
                     </div>
                     

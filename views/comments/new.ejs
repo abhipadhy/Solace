@@ -7,9 +7,16 @@
         <div class="navbar">
             <h2>Solace</h2>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Link</a></li>
-                <li><a href="">Link 1</a></li>
+				<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dashboad</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+			
             </ul>
         </div>
 

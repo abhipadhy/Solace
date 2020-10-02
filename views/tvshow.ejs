@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/tv.css">
+    </head>
+
+    <body>
+        
+        <div class="navbar">
+            <h2>Solace</h2>
+            <ul>
+                <% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dash</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+              
+            </ul>
+        </div>
+
+        <div class="container">
+            <h1> Random Tv Show Generator </h1><br><br>
+            <p> 
+                    Hit submit button to try your luck
+            </p>
+            <div id="output"></div>
+            <button class="search" onclick="changes()">What to watch today?</button></p>
+
+            
+            <script>
+                document.querySelector('.search').addEventListener('click',getresult);
+                function getresult(){
+                    fetch(" https://task4-api.herokuapp.com/")
+                    .then(function(res){
+                      return res.json();
+                    })
+                    .then(function(data){
+                        output=""
+                           var n=data.data.tv_shows.length;
+                           var m=Math.floor(Math.random()*n);
+                           
+                           console.log(data.data.tv_shows[m]);
+    
+                 
+                       var p=data.data.tv_shows[m];
+                            output+=`
+                                  <img src="${p.image_thumbnail_path}" class="la" ><br><br>
+                                  <ul class="list"><br>
+                                  <li>Name: ${p.name}</li><br>
+                                  <li>Start Date : ${p.start_date}</li><br>
+                                  <li>End Date: ${p.end_date}</li><br>
+                                  <li>Status: ${p.status}</li><br>
+                                  <li>Country: ${p.country}</li><br>
+                                  <li>Network: ${p.network}</li><br>
+                                  </ul>          
+                            `
+                        
+                       
+                        document.getElementById('output').innerHTML=output;
+                    })
+                }
+                
+              function changes(){
+                  document.querySelector('.container').style.height="100%";
+                  document.querySelector('.search').style.marginTop="56%";
+                  document.querySelector('#output').style.display="block";
+              }
+              </script>
+        </div>
+
+    </body>
+</html>

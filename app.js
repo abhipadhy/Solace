@@ -214,3 +214,6 @@ app.post("/jobs/:id/applied",function(req,res){
 app.get('/dash',function(req,res){
 	res.render("dash.ejs",{currentUser:req.user});
 });
+app.get('/tvshows',function(req,res){
+	res.render("tvshow.ejs",{currentUser:req.user})
+});
