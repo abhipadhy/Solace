@@ -217,3 +217,6 @@ app.get('/dash',function(req,res){
 app.get('/tvshows',function(req,res){
 	res.render("tvshow.ejs",{currentUser:req.user})
 });
+app.get('/fit',function(req,res){
+	res.render("fitness/index.ejs",{currentUser:req.user});
+});

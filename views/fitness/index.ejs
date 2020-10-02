@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/fitness.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+			<a style="text-decoration: none;" href="/"><h2>Solace</h2></a> 
+            <ul>
+				<% if(!currentUser){ %>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>
+				<%	} else { %>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href='/dash'>Dashboad</a></li>
+			<%	} %>	
+			<li><a href="/blog">Blogs</a></li>
+			<li><a href="/jobs">Jobs</a></li>
+
+			</ul>
+			
+		</div>
+		
+		<br>
+
+		
+<div class="ocontainer">
+	<h1>Health &amp; Fitness</h1>
+	<p>Our exclusive range of workout plans , diet plans and immunity boosting recipes so that you can still pull over that tailored fit shirt
+	
+
+		</p>
+	<div class="container">
+		
+		
+		<a href="https://www.theo.fit/blog/beginnerlift" class="card">
+				<img src="/assets/fit1.svg" width="100%">
+					<h4>
+						Workout Plans
+					</h4>
+                </a>
+                <a href="http://www.emro.who.int/nutrition/nutrition-infocus/nutrition-advice-for-adults-during-the-covid-19-outbreak.html#:~:text=Eat%20fresh%20and%20unprocessed%20foods%20every%20day&text=Daily%2C%20eat%3A%202%20cups%20of,%E2%88%923%20times%20per%20week)." class="card">
+                    <img src="/assets/fit2.svg" width="100%">
+                        <h4>
+                            Diet Plans
+                        </h4>
+                    </a>
+                    <a href="https://www.narayanahealth.org/blog/boost-immune-system-against-coronavirus-covid-19-infection/" class="card">
+                        <img src="/assets/fit3.svg" width="100%">
+                            <h4>
+                            Boost Your Immunity
+                            </h4>
+                        </a>
+                        
+		
+			</div>
+			<button class="btn1" onclick="window.location.href='#'">Upgrade to Premium</button>
+		</div>  
+      
+</body>
+</html>
