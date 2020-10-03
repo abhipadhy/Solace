@@ -1,5 +1,5 @@
-# 'Solace' 
-HelloWorld 4.0 Team 3
+# 'Solace : HelloWorld 4.0 Team 3' 
+
 ![SOLACE](https://user-images.githubusercontent.com/68319172/94983620-2d4eb980-0562-11eb-9bed-64b72916efb5.png)
 
 The chat file in views is a basic design of the chat box we wish to integrate in the website in a future update .
