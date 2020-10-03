@@ -14,4 +14,4 @@ $ npm install --save   // install dependencies
 $ mongod               // start mongodb
 $ node app.js          // start the app.js file
 
-//the website will be hosted on localhost:3000
+//the website will be hosted on localhost:3000 
