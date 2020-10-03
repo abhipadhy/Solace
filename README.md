@@ -1,4 +1,4 @@
-# 'Solace' : HelloWorld 4.0 Team 3 
+# 'Solace' 
 
 ![SOLACE](https://user-images.githubusercontent.com/68319172/94983620-2d4eb980-0562-11eb-9bed-64b72916efb5.png)
 
