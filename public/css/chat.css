@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #eeeeec;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #2c365d;
+    position: absolute;
+    top: 4%;
+    left: 13%;
+}
+
+ul{
+    position: absolute;
+    top: 3%;
+    right: 13%;
+    list-style: none;
+}
+
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #2c365d;
+    text-align: center;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  li a:hover{
+      color: #ff5e3a;
+      transition: 0.3s;
+  }
+
+  .container{
+    position: absolute;
+    width: 73%;
+    height: 85%;
+    margin-top: 6.5%;
+    margin-left: 12%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background: rgb(253, 253, 253);
+    box-shadow: 0 8px 26px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.container:hover{
+    box-shadow: 0 8px 126px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.left{
+    background-color:#e7e7e4 ;
+    border-top-left-radius:25px ;
+    width: 30%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.leftt{
+    background-color:#2c365d ;
+    border-top-left-radius:25px ;
+    width: 100%;
+    height: 12%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.right{
+    position: absolute;
+    border-top-right-radius:25px ;
+    top: 0%;
+    left: 30%;
+    width: 70%;
+    height: 100%;
+}
+
+.rightt{
+    background-color:#ff5e3a;
+    border-top-right-radius:25px ;
+    width: 100%;
+    height: 12%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.pro{
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 2%;
+    top:2.5%;
+    background-color: rgb(216, 216, 216);
+}
+
+.user{
+    color: #e7e7e4;
+    position: absolute;
+    left: 8%;
+    top:1.5%;
+
+}
+.rightf{
+    background-color:#ff5e3a;
+    width: 100%;
+    height: 12%;
+    margin-left: 0%;
+    margin-top: 61%;
+}
+
+.username{
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    left: 6%;
+    top:0.3%;
+}
+
+.leftf{
+    background-color:#2c365d ;
+    width: 100%;
+    height: 12%;
+    margin-left: 0%;
+    margin-top: 61%;
+}
+
+.message{
+    border: none;
+    border-radius: 25px;
+    background: #e7e7e4;
+    outline: none;
+    padding: 2%;
+    width: 70%;
+    color: #2b2a2a;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 8%;
+    margin-top: 1.3%;
+}
+
+.button{
+    background-image: url(<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADr0lEQVRoge2ZT2gcVRzHP7+ZZUObtgfdRJt4CbY7K5gNIbTFg4pGL9pmUyUHC714kQYv9iY1GIK9CBW8tNKLWDyIhSS7xUjFVhS8tLbb7Bq6s1ZEFBtT9iBJSdg/8zxkp4xJs3+SfZMV9nN683uz876ffcy/N9CiRYtKyNpCpO/oYaXUO6AOAe3bkKkSSyDXHMP56Jdbia+8HaZ3w4rGPgB1DugBgn4mrJEg0CNKjoU6LTO3YH/ndjyYkdWZcC4BeZSMEXA+t5OJv7Yj7UZY/UNdFOU4wgQQVIpXs+n4DHhm5NHHrE+AHhSn7HT8w9y8vbhdgTciN28v5hbsH0OdkQLCSyI8nvvbvgBgePY7AGAEzQvbkrIOAk7hs3LzoFvziuwCuH1j8q6foTbD3NzMfLm5260ZG+z7v6Ml0mz4ImJFh088GT3aqXMM7SLhaGwU1NkAzhWdMtpFHDN4EUgDTwdwvn9q4LW9OsbRLnInefFeyQwOsioTcQqlqzpkfDlH/JDx7aqlW8bXy69OmcBWD2BFY6quH5Ty3i1X5sWtPho1xQ3RWFmp7894CFueETsVX/eWWYl9/SMdZil/BegFMoFS4QXPQ+Cm8XVGdEmAjyI6JcAnEd0S4IOIHxLQgJO9GkYpP8KqxM9FjEF7bmZByzg6Duolm4qfBRktYgz+mprSIgE+zAiAnZo+p3uMprghNoKWSLPhFVmE8rJkkxPuO9xdbv7j1jwich2Aohz3M9TmMN2MPz2ouI1H9oZzouQYwnOhzkgh1G391mzrv1b/UFeoIzIqMAGYSsnbuYXMHVjzfcTqHZpAZKzSwQS+zaTiL6/vGTes6M2rIM83MPvGORQTmXT8fU+u/xLujb0iwklWF4h3r+0HaGN5Vyr1zX1vLRKNHVGQaHTgNSwC15SSM9n09NfejnU3xPL3hpmHHcWKxv4EuvPGzg7AKyLAKQAR9XpmNjHZqOS1Uu/ldwVAFZ093qIVHX5TwSHgRmY2MdWocPVQh8i4AXQBGG2Be251X99QP6iPgYIynBPAll9bN0PNIvujyQPADuAPd6Eg3Dd80FRcBtpF5N3srUvXNeWsSo0PjeOGQfI0gCg+HRg4snMpLydR6j2QNuB0Znb6jMacVakq8sQzIzval26eBxkEio6o/Ut54y7CHmBZlLyVSU+f1x+1MlVF2u/nLyPyrLu/IG8gKJT6UgxzLJOaymrOWBNVRZTIiii1DOSAFIofjID5xe3k5O/647Vo0aJR/AujTmMvHlg2LwAAAABJRU5ErkJggg==">);
+    
+}
