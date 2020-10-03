@@ -102,7 +102,7 @@ p{
 
 .form1{
     position: relative;
-    top: 70%;
+    top: 75%;
     left: 13%;
 }
 
@@ -113,7 +113,8 @@ p{
     border-radius: 25px;
     transition: 0.3s;
     padding: 3%;
-    width: 25%;
+    width: 30%;
+    margin-top: 10%;
 }
 
 .button1:hover{
@@ -124,4 +125,9 @@ p{
 }
 a{
     text-decoration: none;
+    
 }
+a .button1{
+    width: 30%;
+}
+
