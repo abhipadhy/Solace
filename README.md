@@ -2,6 +2,10 @@
 
 ![SOLACE](https://user-images.githubusercontent.com/68319172/94983620-2d4eb980-0562-11eb-9bed-64b72916efb5.png)
 
+ABOUT US:
+Our objective with this web-app is to come together and beat the covid-19 lockdown induced stress, as we understand how difficult it has been for everyone and we've tried to keep in consideration how little things can spark joy in these times...
+Thus presenting Solace, the one stop solution where all your little worries come to an end.
+
 #'How to Start'
 
 Prerequisites : MongoDB and NodeJS
